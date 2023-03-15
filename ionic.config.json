@@ -1,0 +1,7 @@
+{
+  "name": "firefoxGT108",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
