@@ -1,3 +1,9 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+<div>
+  {{ info | json }}
+</div>
+<div *ngIf="info?.webViewVersion; else no">
+  webViewVersion is provided! Works
+</div>
+<ng-template #no>
+  <div>Check Console, webViewVersion and manufacturer information missing.</div>
+</ng-template>

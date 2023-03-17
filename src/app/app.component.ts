@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Device, DeviceInfo } from '@capacitor/device';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor() {
+    Device.getInfo().then((info) => {
+      console.log(info);
+      this.info = info;
+    });
+  }
+
+  info: DeviceInfo | undefined;
 }
